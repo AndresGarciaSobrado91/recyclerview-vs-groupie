@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.garcia.recyclerviewvsgroupie.fragments.home.HomeFragment"
+        android:label="RecyclerView vs Groupie"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recyclerviewFragment"
+            app:destination="@id/recyclerviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerviewFragment"
+        android:name="com.garcia.recyclerviewvsgroupie.fragments.recyclerview.RecyclerviewFragment"
+        android:label="Recyclerview"
+        tools:layout="@layout/fragment_recyclerview">
+        <action
+            android:id="@+id/action_recyclerviewFragment_to_groupieFragment"
+            app:destination="@id/groupieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupieFragment"
+        android:name="com.garcia.recyclerviewvsgroupie.fragments.groupieFragment.GroupieFragment"
+        android:label="Groupie"
+        tools:layout="@layout/fragment_recyclerview" >
+        <action
+            android:id="@+id/action_groupieFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.garcia.recyclerviewvsgroupie.fragments.result.ResultFragment"
+        android:label="Results"
+        tools:layout="@layout/fragment_result" />
+</navigation>
